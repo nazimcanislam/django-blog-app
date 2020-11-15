@@ -41,5 +41,10 @@ python3 -m pip install -r requirements.txt
 python3 manage.py runserver
 ```
 
+Ve son olarak favori tarayıcınızın URL adresine bunu yazarak uygulayamayı çalıştırın ve gönderi paylaşmaya hazırsınız!
+```
+http://127.0.0.1:8000/
+```
+
 ## Şifremi unuttum için mail adresi
 Kök dizinde bulunan `email_user.txt` dosyasına içinde belirtildiği gibi bir `gmail` adresi ve `şifresi` girilmeli. Neden özellikle gmail? Çünkü bu proje mail sunucusu olarak `smtp.gmail.com` kullanıyor.
