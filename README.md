@@ -48,3 +48,15 @@ http://127.0.0.1:8000/
 
 ## Şifremi unuttum için mail adresi
 Kök dizinde bulunan `email_user.txt` dosyasına içinde belirtildiği gibi bir `gmail` adresi ve `şifresi` girilmeli. Neden özellikle gmail? Çünkü bu proje mail sunucusu olarak `smtp.gmail.com` kullanıyor.
+
+`api/settings.py`
+```python
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+with open(file='email_user.txt', mode='r', encoding='utf-8') as file:
+    EMAIL_HOST_USER = file.readline()
+    EMAIL_HOST_PASSWORD = file.readline()
+```
