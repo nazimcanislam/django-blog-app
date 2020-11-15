@@ -12,6 +12,30 @@ Python Django ile yaptığım küçük çaplı bir blog uygulaması. Basit, kola
 - Profil düzenlemesi
 - Şifremi unuttum (mail adresi gerekli)
 
+## Kurulum ve sunucuyu çalıştırma
+
+#### Öncelikle bir sanal ortam oluşturmakla başlayalım
+```bash
+python3 -m pip install virtualenv
+python3 -m virtualenv venv
+```
+
+#### Sanal ortamı çalıştır
+`Windows`
+```bash
+venv\Scripts\activate
+```
+`Linux` ve `macOS`
+```
+source venv/bin/activate
+```
+
+#### Son olarak kütüphaneleri yükle
+```bash
+python3 -m pip install requirements.txt
+```
+
+
 ## Blog ugulamasını yerel olarak çalıştırma
 ```bash
 python3 manage.py runserver
