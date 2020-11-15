@@ -32,7 +32,7 @@ source venv/bin/activate
 
 #### Son olarak kütüphaneleri yükle
 ```bash
-python3 -m pip install requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 
