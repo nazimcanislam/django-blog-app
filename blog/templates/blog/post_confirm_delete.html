@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+
+            <fieldset class="form-group">
+                <legend class="border-bottom md-4">Gönderi Sil</legend>
+                <h2><strong>"{{ object.başlık }}"</strong> adlı gönderiyi silmek istediğinizden emin misiniz??</h2>
+            </fieldset>
+
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Evet, eminim</button>
+                <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Hayır, vazgeçtim</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
